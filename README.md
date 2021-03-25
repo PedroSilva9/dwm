@@ -1,1 +1,2 @@
-My personal config of dwm
+# dwm
+My personal dwm config
