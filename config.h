@@ -68,7 +68,6 @@ static const char *termcmd[]  = { "termite", NULL };
 #include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -108,6 +107,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("dmenu_run") },
+	{ MODKEY,                       XK_d,      spawn,          SHCMD("rofi -modi window,drun,run,ssh -theme $HOME/.config/rofi/onedark.rasi -show drun -show-icons -icon-theme \"Paper\"") },
 	{ 0,				                    XK_Print,	 spawn,		       SHCMD("maim -s -u | xclip -selection clipboard -t image/png -i") },
 	{ ShiftMask,                    XK_Print,	 spawn,		       SHCMD("maim -s -u $HOME/Pictures/screenshots/$(date '+%y%m%d-%H%M-%S').png") },
 };
