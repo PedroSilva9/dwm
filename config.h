@@ -107,8 +107,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
-	{ MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("dmenu_run") },
-	{ MODKEY,                       XK_d,      spawn,          SHCMD("rofi -modi window,drun,run,ssh -theme $HOME/.config/rofi/onedark.rasi -show drun -show-icons -icon-theme \"Paper\"") },
+	{ MODKEY,                       XK_d,      spawn,          SHCMD("dmenu_run") },
+	{ MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("rofi -modi window,drun,run,ssh -theme $HOME/.config/rofi/onedark.rasi -show drun -show-icons -icon-theme \"Paper\"") },
 	{ 0,				                    XK_Print,	 spawn,		       SHCMD("maim -s -u | xclip -selection clipboard -t image/png -i") },
 	{ ShiftMask,                    XK_Print,	 spawn,		       SHCMD("maim -s -u $HOME/Pictures/screenshots/$(date '+%y%m%d-%H%M-%S').png") },
 };
